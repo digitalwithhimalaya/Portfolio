@@ -919,7 +919,7 @@ blockquote b {
 }
 
 .tmp-section-gap {
-  padding: 120px 0;
+  padding: 50px 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tmp-section-gap {
@@ -11732,6 +11732,25 @@ header.header-full-width.header--sticky.sticky {
   color: var(--color-heading);
   font-family: var(--font-secondary);
 }
+.video-fullscreen-section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fullscreen-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1; /* Pushes video to the background */
+}
 
 .overlay_close_side_menu {
   display: block;
@@ -11799,6 +11818,7 @@ header.header-full-width.header--sticky.sticky {
   .tmp-scroll-trigger:not(.tmp-scroll-trigger--offscreen).tmp-zoom-in {
     animation: var(--animation-zoom-in);
     animation-delay: calc(var(--animation-order) * 75ms);
+    border-radius: 10%;
   }
   .tmp-scroll-trigger:not(.tmp-scroll-trigger--offscreen).zoom_out {
     animation: var(--animation-zoom-out);
@@ -18520,8 +18540,8 @@ section.clients-testimonial-area {
 }
 @media (min-width: 1200px) {
   .banner-three-main-wrapper {
-    padding-top: 300px;
-    padding-bottom: 358px;
+    padding-top: 260px;
+    padding-bottom: 280px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
